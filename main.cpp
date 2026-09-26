@@ -24,8 +24,11 @@ int main() {
         cout << entry.path() << endl;
     }
     for (const auto& entry : filesystem::directory_iterator(var_system)) {
-        cout << entry.path() << " (" << entry.path().extension() << ")" << endl;
-    }
+        if (entry.path().extension() == ".desktop") {
+            for (const auto& sub_entry : filesystem::directory_iterator(entry.path())) {
+                cout << sub_entry.path() << endl;
+            }
+        }
 
     return 0;
 }
