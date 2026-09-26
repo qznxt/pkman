@@ -38,7 +38,7 @@ int main() {
     string var_local = home + "/.local/share/applications/";
     string var_system = "/usr/share/applications/";
     pmquery();
-    cout << "hi " << home << " following packmans are installed "<< endl;
+    cout << "hi :> !" << " following packmans are installed "<< endl;
     if (snap) {
         cout << "Snap is installed." << endl;
     } else {
